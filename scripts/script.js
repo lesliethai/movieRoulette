@@ -6,10 +6,12 @@ const movie = {};
 
 // Create an init method to setup the application
 movie.init = () => { 
+    movie.displayMovie(); 
     movie.getSelectedMovie();
-    movie.randomizeMovie(); 
-    movie.generateMovie(); 
+    // movie.randomizeMovie();  
+    // movie.generateMovie();   
 } 
+
 // k_3socm0b3 k_z8o3ltcf  
 movie.apiKey = `k_z8o3ltcf`;
 movie.url = `https://imdb-api.com/en/API/MostPopularMovies/${movie.apiKey}`;
@@ -19,26 +21,41 @@ movie.url = `https://imdb-api.com/en/API/MostPopularMovies/${movie.apiKey}`;
 movie.getSelectedMovie = () => { 
     fetch(movie.url)
         .then(res => res.json())
-        .then(response => {
-            // console.log(data.items[0].fullTitle);     
-            movie.randomizeMovie(response.items);
-            movie.generateMovie(response.items);  
+        .then(response => { 
+            // console.log(response.items[0].fullTitle); 
+            movie.returnedMovies = response.items;     
+            movie.generateMovie(); 
         }); 
 }
 
+
 // randomize film
-movie.randomizeMovie = (film) => {
-    // console.log(film, '31'); 
+movie.randomizeMovie = (film) => { 
     const randomMovie = film[Math.floor(Math.random() * film.length)]; 
-    // console.log(randomMovie); 
-    return randomMovie 
+    return randomMovie
 }
 
-movie.generateMovie = (data) => {
-    const randoMovie = movie.randomizeMovie(data); 
+// generate and append to page
+movie.generateMovie = () => {
+    // retrieve data (titles, description, etc)
+    const randoMovie = movie.randomizeMovie(movie.returnedMovies);
     const title = randoMovie.fullTitle; 
-    console.log(title);  
+
+    // append information to page
+    const titleDisplay = document.querySelector('.title');
+    titleDisplay.textContent = `${title} `; 
 }
+
+// generate on click
+movie.displayMovie = () => {
+    const randomizeBtn = document.querySelector('.randomizeBtn');
+
+    randomizeBtn.addEventListener('click', function(e){
+        e.preventDefault();
+        movie.generateMovie(movie.returnedMovies); 
+        console.log('test'); 
+    }); 
+} 
 
 // console.log(movie.randomizeMovie); 
 /*
