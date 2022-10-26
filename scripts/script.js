@@ -8,8 +8,6 @@ const movie = {};
 movie.init = () => { 
     movie.displayMovie(); 
     movie.getSelectedMovie();
-    // movie.randomizeMovie();  
-    // movie.generateMovie();   
 } 
 
 // k_3socm0b3 k_z8o3ltcf  
@@ -21,13 +19,11 @@ movie.url = `https://imdb-api.com/en/API/MostPopularMovies/${movie.apiKey}`;
 movie.getSelectedMovie = () => { 
     fetch(movie.url)
         .then(res => res.json())
-        .then(response => { 
-            // console.log(response.items[0].fullTitle); 
+        .then(response => {  
             movie.returnedMovies = response.items;     
             movie.generateMovie(); 
         }); 
 }
-
 
 // randomize film
 movie.randomizeMovie = (film) => { 
@@ -39,11 +35,19 @@ movie.randomizeMovie = (film) => {
 movie.generateMovie = () => {
     // retrieve data (titles, description, etc)
     const randoMovie = movie.randomizeMovie(movie.returnedMovies);
-    const title = randoMovie.fullTitle; 
-
+    const title = randoMovie.title; 
+    const year = randoMovie.year;
+    const poster = randoMovie.image;
     // append information to page
     const titleDisplay = document.querySelector('.title');
+    const yearDisplay = document.querySelector('.yearOfRelease');
+    const imageDisplay = document.querySelector('.poster');
+
+
     titleDisplay.textContent = `${title} `; 
+    yearDisplay.textContent = `${year}`;
+    imageDisplay.src = `${poster}`; 
+    imageDisplay.alt = `${title} poster`
 }
 
 // generate on click
@@ -53,7 +57,6 @@ movie.displayMovie = () => {
     randomizeBtn.addEventListener('click', function(e){
         e.preventDefault();
         movie.generateMovie(movie.returnedMovies); 
-        console.log('test'); 
     }); 
 } 
 
