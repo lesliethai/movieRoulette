@@ -1,5 +1,5 @@
 // MVP: query the imdb-api.com API for selected queries to generate random movie titles based on filter selected
-// Stretch goal: add ability to search movies database/library for movies
+
 
 // Create an app object (movieGenerator)
 const movie = {};
@@ -60,19 +60,4 @@ movie.displayMovie = () => {
     }); 
 } 
 
-// console.log(movie.randomizeMovie); 
-/*
-// Initialize preset data in the dedicated properties
-// - apiURL : https://imdb-api.com/en/API/
-// - apiKey: k_z8o3ltcf
-
-// write a method that gets the data from the API
-
-// When the API call is successful, display the result by appending the data to the page
-// Clear old selection when you click again
-// If the API call fails, display an error message
-// Create default message to tell user to select something
-
-
-*/
 movie.init(); 
