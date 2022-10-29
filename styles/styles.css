@@ -242,3 +242,55 @@ html {
   right: 0;
   text-align: center;
 }
+
+h1 {
+  font-family: "Libre Baskerville", serif;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+}
+
+.wrapper {
+  max-width: 1280px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+a:hover,
+a:focus,
+button:hover,
+button:focus {
+  cursor: pointer;
+}
+
+.randomizeBtn {
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: none;
+  cursor: pointer;
+  margin-left: 20px;
+  padding: 25px 20px;
+}
+.randomizeBtn:hover, .randomizeBtn:focus {
+  color: white;
+}
