@@ -212,7 +212,7 @@ html {
           box-sizing: inherit;
 }
 
-.sr-only {
+.srOnly {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -317,4 +317,8 @@ footer {
   width: 50%;
   background-color: #dedae3;
   border-radius: 15px;
+}
+
+.displayNone {
+  display: none;
 }

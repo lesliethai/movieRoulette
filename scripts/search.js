@@ -23,7 +23,6 @@ movie.movieSearch = (q) => {
     fetch(movie.baseUrl)
         .then(res => res.json())
         .then(response => { 
-            console.log(response.results, 'test');
             movie.displaySearch(response.results); 
         });
 }
@@ -59,12 +58,16 @@ movie.displaySearch = (array) => {
 movie.userSearch = () => {
     // search input selector
     const submitButton = document.querySelector('.submitSearchBtn');
+    const movieTitleDisplay = document.querySelector('.movieTitleDisplay');
+    const movieDisplayP = document.querySelector('.movieDisplayP');
 
     // get search input value
     submitButton.addEventListener('click', function(e){
         e.preventDefault();
-        movie.searchInput.text = ""; 
         movie.movieSearch();
+        movieDisplayP.classList.remove('displayNone'); 
+        movieTitleDisplay.textContent = movie.searchInput.value;
+        movie.searchInput.value = "";
     })
 }
 
