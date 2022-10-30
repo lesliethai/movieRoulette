@@ -3,10 +3,70 @@
 // create app object 
 const movie = {}; 
 
+// init method
 movie.init = () => {
-    console.log(movie);
+    movie.userSearch();  
+}  
+
+// apiKey and url
+movie.apiKey = `k_z8o3ltcf`; 
+movie.searchInput = document.querySelector('.searchInput');
+
+// api call
+movie.movieSearch = (q) => {
+    movie.baseUrl = new URL(`https://imdb-api.com/en/API/SearchMovie/`);
+    // add search params to base url 
+    movie.baseUrl.search = new URLSearchParams({
+        apiKey: movie.apiKey, 
+        expression: movie.searchInput.value 
+    });
+    fetch(movie.baseUrl)
+        .then(res => res.json())
+        .then(response => { 
+            console.log(response.results, 'test');
+            movie.displaySearch(response.results); 
+        });
 }
 
+// append on page
+movie.displaySearch = (array) => {
+    // selectors
+    const movieUl = document.querySelector('.movieUl');
+    movieUl.innerHTML = ``; 
+
+    array.forEach(item => {
+        // create li
+        const movieContainer = document.createElement(`li`);
+
+        // create img & title
+        const image = document.createElement('img');
+        image.src = item.image;
+        image.alt = `Poster for ${item.title}`;
+
+        const title = document.createElement('p');
+        title.textContent = item.title;
+
+        // append to li
+        movieContainer.appendChild(image);
+        movieContainer.appendChild(title);
+        
+        // append to ul
+        movieUl.appendChild(movieContainer); 
+    })
+}
+
+// get user input 
+movie.userSearch = () => {
+    // search input selector
+    const submitButton = document.querySelector('.submitSearchBtn');
+
+    // get search input value
+    submitButton.addEventListener('click', function(e){
+        e.preventDefault();
+        movie.searchInput.text = ""; 
+        movie.movieSearch();
+    })
+}
 
 movie.init();
 // console.log(movie.randomizeMovie);
