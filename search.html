@@ -5,13 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Roulette - Search</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Libre+Baskerville:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
     <a href="#mainContent" class="skipLink">Skip to main content.</a>
     <header>
         <nav class="navBar">
             <a href="./index.html" class="logo">
-                <img src="./assets/mrLogo.png" alt="">
+                <h1>Movie Roulette</h1>
             </a>
     
             <div class="headerNav">
@@ -31,6 +36,7 @@
             </form>
         </section>
         <section class="movieDisplay">
+            <p class="displayNone movieDisplayP">Displaying movies for the searched term " <span class="movieTitleDisplay"></span> "</p>
             <ul class="movieUl"></ul>
         </section>
     </main>
