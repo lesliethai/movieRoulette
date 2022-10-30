@@ -1,7 +1,11 @@
 .wrapper {
   max-width: 1280px;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
+}
+
+body {
+  font-size: 62.5%;
 }
 
 ul {
@@ -11,7 +15,7 @@ ul {
 }
 
 img {
-  width: 100%;
+  width: 50%;
   display: block;
 }
 
@@ -28,6 +32,10 @@ button:focus {
   cursor: pointer;
 }
 
+.logo img {
+  width: 50%;
+}
+
 .randomizeBtn {
   font-family: $baseFont;
   text-transform: uppercase;
@@ -41,4 +49,18 @@ button:focus {
   &:focus{
     color: $solidWhite;
   }
+}
+
+nav, 
+footer {
+  background-color: $primaryColor;
+  padding: 5px 0;
+  border-radius: 15px;
+}
+
+.randomize {
+  padding: 30px;
+  width: 50%;
+  background-color: $secondaryColor;
+  border-radius: 15px;
 }

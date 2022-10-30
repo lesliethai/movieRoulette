@@ -13,32 +13,36 @@
 <body>
     <a href="#mainContent" class="skipLink">Skip to main content.</a>
     <header>
-        <nav class="navBar">
-            <a href="./index.html" class="logo">
-                <img src="./assets/mrLogo.png" alt="Movie Roulette">
-            </a>
-
-            <div class="headerNav">
-                <ul>
-                    <li><a href="./index.html">Generate Random Movie</a></li>
-                    <li><a href="./search.html">Search Movies</a></li>
-                </ul>
-            </div>
-        </nav>
+        <div class="wrapper">
+            <nav class="navBar">
+                <a href="./index.html" class="logo">
+                    <img src="./assets/mrLogo.png" alt="Movie Roulette">
+                </a>
+    
+                <div class="headerNav">
+                    <ul>
+                        <li><a href="./index.html">Generate Random Movie</a></li>
+                        <li><a href="./search.html">Search Movies</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
     </header>
     <main>
-        <h1>Generate a Random Movie!</h1>
-        <section class="randomize">
-            <img src="" alt="" class="poster">
-            <p>Title: <span class="title"></span></p>
-            <span class="yearOfRelease">Year of Release:</span>
-            <p class="movieDescription"></p>
-            <button class="randomizeBtn">Generate</button>
-        </section>
+        <div class="wrapper">
+            <h1>Generate a Random Movie!</h1>
+            <section class="randomize">
+                <img src="" alt="" class="poster">
+                <p>Title: <span class="title"></span></p>
+                <p>Year of Release: <span class="yearOfRelease"></span></p>
+                <p class="movieDescription"></p>
+                <button class="randomizeBtn">Randomize</button>
+            </section>
+        </div>
     </main>
     <footer>
         <p>Created at Juno College</p>
-    </footer>
+    </footer>        
     <script src="./scripts/randomizer.js"></script>
 </body>
 </html>

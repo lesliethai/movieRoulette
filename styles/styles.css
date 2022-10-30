@@ -245,16 +245,22 @@ html {
 
 h1 {
   font-family: "Libre Baskerville", serif;
+  font-size: 3rem;
 }
 
 p {
   font-family: "Lato", sans-serif;
+  font-size: 1.5rem;
 }
 
 .wrapper {
   max-width: 1280px;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
+}
+
+body {
+  font-size: 62.5%;
 }
 
 ul {
@@ -264,7 +270,7 @@ ul {
 }
 
 img {
-  width: 100%;
+  width: 50%;
   display: block;
 }
 
@@ -282,6 +288,10 @@ button:focus {
   cursor: pointer;
 }
 
+.logo img {
+  width: 50%;
+}
+
 .randomizeBtn {
   font-family: "Lato", sans-serif;
   text-transform: uppercase;
@@ -293,4 +303,18 @@ button:focus {
 }
 .randomizeBtn:hover, .randomizeBtn:focus {
   color: white;
+}
+
+nav,
+footer {
+  background-color: #9c97ee;
+  padding: 5px 0;
+  border-radius: 15px;
+}
+
+.randomize {
+  padding: 30px;
+  width: 50%;
+  background-color: #dedae3;
+  border-radius: 15px;
 }
