@@ -1,5 +1,5 @@
 header {
-    min-height: 90vh;
+    min-height: 100vh;
 }
 
 .generateUrl,
@@ -11,6 +11,11 @@ header {
     display: flex; 
     justify-content: end; 
     margin: 0 50px; 
+
+    img {
+        width: 80%;
+        margin: 150px 0;
+    }
 }
 
 .headerImage {
