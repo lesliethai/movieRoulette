@@ -1,0 +1,26 @@
+header {
+    min-height: 90vh;
+}
+
+.generateUrl,
+.searchUrl {
+    color: $tertiaryColor;
+}
+
+.headerImgContainer {
+    display: flex; 
+    justify-content: end; 
+    margin: 0 50px; 
+}
+
+.headerImage {
+    display: flex;
+
+    .headerHeadingContainer {
+        display: flex;
+        align-items: center; 
+        color: $accentColor;
+        margin-top: 200px;
+        min-width: 300px;
+    }
+}

@@ -248,7 +248,8 @@ h1 {
   font-size: 2rem;
 }
 
-p {
+p,
+h2 {
   font-family: "Lato", sans-serif;
   font-size: 1.5rem;
 }
@@ -258,10 +259,20 @@ a {
   font-size: 1rem;
 }
 
+header h2 {
+  font-family: "Dancing Script", cursive;
+  font-size: 2.5rem;
+}
+
 .wrapper {
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
+}
+
+* {
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -283,7 +294,7 @@ li:not(:last-child) {
 }
 
 img {
-  width: 50%;
+  width: 65%;
   display: block;
 }
 
@@ -292,7 +303,7 @@ a {
   text-decoration: none;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 a:hover,
@@ -300,8 +311,69 @@ a:focus,
 button:hover,
 button:focus {
   cursor: pointer;
+  color: #F04A47;
 }
 
 header {
   min-height: 90vh;
+}
+
+.generateUrl,
+.searchUrl {
+  color: #F04A47;
+}
+
+.headerImgContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  margin: 0 50px;
+}
+
+.headerImage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.headerImage .headerHeadingContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #FFE9B3;
+  margin-top: 200px;
+  min-width: 300px;
+}
+
+main {
+  padding-bottom: 100px;
+}
+main .randomize {
+  background: rgb(255, 255, 255);
+  border-radius: 15px;
+}
+main img {
+  width: 20%;
+}
+main h2 {
+  color: rgb(255, 255, 255);
+  margin-bottom: 50px;
+}
+
+footer {
+  background: #FBC2C1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
