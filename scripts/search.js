@@ -22,7 +22,7 @@ movie.movieSearch = (q) => {
     });
     fetch(movie.baseUrl)
         .then(res => res.json())
-        .then(response => { 
+        .then(response => {
             movie.displaySearch(response.results); 
         });
 }
