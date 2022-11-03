@@ -6,12 +6,22 @@
 
 body {
   font-size: 62.5%;
+  background-color: $primaryColor;
 }
 
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+li {
+  display: inline-block;
+  
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+  
 }
 
 img {
@@ -23,6 +33,7 @@ a {
   display: inline-block;
   text-decoration: none;
   transition: 0.3s;
+  color: $solidWhite;
 }
 
 a:hover,
@@ -32,39 +43,6 @@ button:focus {
   cursor: pointer;
 }
 
-.logo img {
-  width: 50%;
-}
-
-.randomizeBtn {
-  font-family: $baseFont;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  border: none;
-  cursor: pointer;
-  margin-left: 20px;
-  padding: 25px 20px;
-
-  &:hover,
-  &:focus{
-    color: $solidWhite;
-  }
-}
-
-nav, 
-footer {
-  background-color: $primaryColor;
-  padding: 5px 0;
-  border-radius: 15px;
-}
-
-.randomize {
-  padding: 30px;
-  width: 50%;
-  background-color: $secondaryColor;
-  border-radius: 15px;
-}
-
-.displayNone {
-  display: none;
+header {
+  min-height: 90vh;
 }
