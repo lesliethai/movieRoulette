@@ -264,9 +264,18 @@ header h2 {
   font-size: 2.5rem;
 }
 
+.randomizeBtn {
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+}
+
+footer p {
+  font-size: 1.3rem;
+}
+
 .wrapper {
-  max-width: 1280px;
-  width: 100%;
+  max-width: 1200px;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -294,7 +303,7 @@ li:not(:last-child) {
 }
 
 img {
-  width: 65%;
+  width: 100%;
   display: block;
 }
 
@@ -315,7 +324,7 @@ button:focus {
 }
 
 header {
-  min-height: 90vh;
+  min-height: 100vh;
 }
 
 .generateUrl,
@@ -331,6 +340,10 @@ header {
       -ms-flex-pack: end;
           justify-content: end;
   margin: 0 50px;
+}
+.headerImgContainer img {
+  width: 80%;
+  margin: 150px 0;
 }
 
 .headerImage {
@@ -352,9 +365,12 @@ header {
 
 main {
   padding-bottom: 100px;
+  background: url("../assets/mainImg.svg") no-repeat center;
+  background-size: contain;
+  background-color: rgba(47, 46, 65, 0.5);
 }
 main .randomize {
-  background: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 15px;
 }
 main img {
@@ -362,7 +378,38 @@ main img {
 }
 main h2 {
   color: rgb(255, 255, 255);
-  margin-bottom: 50px;
+  margin-bottom: 100px;
+  padding-top: 40px;
+  text-align: center;
+}
+main section {
+  padding: 50px 0;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+main p {
+  line-height: 2.5rem;
+}
+main p:not(:last-child) {
+  margin-top: 15px;
+}
+main img {
+  margin: 0 auto;
+}
+main .randomizeBtn {
+  padding: 15px 30px;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid #25335C;
+  color: #25335C;
+  border-radius: 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+main .randomizeBtn:hover,
+main .randomizeBtn :focus {
+  border: 2px solid rgb(255, 255, 255);
+  background-color: #25335C;
+  color: rgb(255, 255, 255);
 }
 
 footer {
