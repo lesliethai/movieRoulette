@@ -24,6 +24,7 @@ movie.movieSearch = (q) => {
         .then(res => res.json())
         .then(response => {
             movie.displaySearch(response.results); 
+            movie.displaySentence(response.results);
         });
 }
 
@@ -54,22 +55,41 @@ movie.displaySearch = (array) => {
     })
 }
 
+// display search or error sentence
+movie.displaySentence = (array) => {
+    console.log(array);
+    const error = document.querySelector('.error');
+    const movieDisplayP = document.querySelector('.movieDisplayP');
+
+    if (array.length > 0) {
+        error.classList.add('displayNone');
+        movieDisplayP.classList.remove('displayNone');
+
+    } else if (array.length === 0) {
+        error.classList.remove('displayNone');
+        movieDisplayP.classList.add('displayNone');
+    }
+}
+
 // get user input 
 movie.userSearch = () => {
     // search input selector
     const submitButton = document.querySelector('.submitSearchBtn');
     const movieTitleDisplay = document.querySelector('.movieTitleDisplay');
-    const movieDisplayP = document.querySelector('.movieDisplayP');
+    const errorDisplay = document.querySelector('.errorDisplay');
+
+    // const movieDisplayP = document.querySelector('.movieDisplayP');
 
     // get search input value
     submitButton.addEventListener('click', function(e){
         e.preventDefault();
         movie.movieSearch();
-        movieDisplayP.classList.remove('displayNone'); 
         movieTitleDisplay.textContent = movie.searchInput.value;
+        errorDisplay.textContent = movie.searchInput.value;
         movie.searchInput.value = "";
     })
 }
+
 
 movie.init();
 // console.log(movie.randomizeMovie);
