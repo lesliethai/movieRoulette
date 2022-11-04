@@ -312,7 +312,7 @@ a {
   text-decoration: none;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  color: rgb(255, 255, 255);
+  color: white;
 }
 
 a:hover,
@@ -364,20 +364,18 @@ header {
 }
 
 main {
-  padding-bottom: 100px;
-  background: url("../assets/mainImg.svg") no-repeat center;
-  background-size: contain;
-  background-color: rgba(47, 46, 65, 0.5);
+  background-color: #29304E;
 }
 main .randomize {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 15px;
 }
-main img {
-  width: 20%;
+main .poster {
+  width: 300px;
+  height: 400px;
 }
 main h2 {
-  color: rgb(255, 255, 255);
+  color: white;
   margin-bottom: 100px;
   padding-top: 40px;
   text-align: center;
@@ -385,7 +383,7 @@ main h2 {
 main section {
   padding: 50px 0;
   text-align: center;
-  color: rgb(255, 255, 255);
+  color: white;
 }
 main p {
   line-height: 2.5rem;
@@ -396,20 +394,58 @@ main p:not(:last-child) {
 main img {
   margin: 0 auto;
 }
-main .randomizeBtn {
+main button {
   padding: 15px 30px;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   border: 2px solid #25335C;
   color: #25335C;
   border-radius: 10px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-main .randomizeBtn:hover,
-main .randomizeBtn :focus {
-  border: 2px solid rgb(255, 255, 255);
+main button:hover,
+main button :focus {
+  border: 2px solid white;
   background-color: #25335C;
-  color: rgb(255, 255, 255);
+  color: white;
+}
+main .bottomImg {
+  padding: 0;
+}
+
+.search form {
+  text-align: center;
+}
+.search form .searchInput {
+  width: 250px;
+  padding: 15px 30px;
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+}
+.search form .submitSearchBtn {
+  border-radius: 0;
+  border: 2px solid white;
+  font-size: 1rem;
+}
+
+li img {
+  width: 200px;
+  height: 250px;
+}
+
+.movieUl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.movieUl li {
+  width: 250px;
+  padding-top: 50px;
 }
 
 footer {

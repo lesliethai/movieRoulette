@@ -39,17 +39,23 @@
         </div>
     </header>
     <main>
-        <section class="search">
-            <form action="">
-                <label for="search" placeholder="Search Movie" class="srOnly">Search Movie:</label>
-                <input type="text" class="searchInput">
-                <button class="submitSearchBtn">Search Movie</button>
-            </form>
-        </section>
-        <section class="movieDisplay">
-            <p class="displayNone movieDisplayP">Displaying movies for the searched term " <span class="movieTitleDisplay"></span> "</p>
-            <ul class="movieUl"></ul>
-        </section>
+        <div class="wrapper">
+            <section class="search">
+                <h2>Movie Search</h2>
+                <form action="">
+                    <label for="search" placeholder="Search Movie" class="srOnly">Search Movie:</label>
+                    <input type="text" class="searchInput">
+                    <button class="submitSearchBtn">Search Movie</button>
+                </form>
+            </section>
+            <section class="movieDisplay">
+                <p class="displayNone movieDisplayP">Displaying movies for the searched term " <span class="movieTitleDisplay"></span> "</p>
+                <ul class="movieUl"></ul>
+            </section>
+        </div>
+            <section class="bottomImg">
+                <img src="./assets/mainImg.svg" alt="A man by the campfire in the forrest with the moonlight and star lights beaming down">
+            </section>
     </main>
     <footer>
         <p>Created at Juno College</p>

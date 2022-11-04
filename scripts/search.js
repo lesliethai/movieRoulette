@@ -18,7 +18,7 @@ movie.movieSearch = (q) => {
     // add search params to base url 
     movie.baseUrl.search = new URLSearchParams({
         apiKey: movie.apiKey, 
-        expression: movie.searchInput.value 
+        expression: movie.searchInput.value,
     });
     fetch(movie.baseUrl)
         .then(res => res.json())
