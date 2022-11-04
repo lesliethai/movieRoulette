@@ -323,6 +323,18 @@ button:focus {
   color: #F04A47;
 }
 
+.displayNone {
+  display: none;
+}
+
+.errorDisplay {
+  color: #F04A47;
+}
+
+.movieTitleDisplay {
+  color: #FBC2C1;
+}
+
 header {
   min-height: 100vh;
 }

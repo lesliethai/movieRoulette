@@ -49,3 +49,14 @@ button:focus {
   color: $tertiaryColor; 
 }
 
+.displayNone {
+  display: none;
+}
+
+.errorDisplay {
+  color: $tertiaryColor;
+}
+
+.movieTitleDisplay {
+  color: $secondaryColor;
+}
