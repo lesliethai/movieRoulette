@@ -1,0 +1,33 @@
+.search form {
+  text-align: center;
+
+  .searchInput {
+    width: 250px;
+    padding: 15px 30px;
+    font-family: $baseFont;
+    font-size: 1rem;
+  }
+
+  .submitSearchBtn {
+    border-radius: 0;
+    border: 2px solid $solidWhite;
+    font-size: 1rem;
+  }
+
+}
+
+li img {
+  width: 200px;
+  height: 250px;
+}
+
+.movieUl {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  
+  li {
+    width: 250px;
+    padding-top: 50px;
+  }
+}

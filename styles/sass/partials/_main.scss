@@ -1,17 +1,15 @@
 main {
-    padding-bottom: 100px;
-    background: url("../assets/mainImg.svg") no-repeat center;
-    background-size: contain;
-    background-color: rgba(47, 46, 65, 0.5);
 
+    background-color: $quaternary;
 
     .randomize {
         background: rgba($color: $solidWhite, $alpha: 0.1);
         border-radius: 15px;
     }
 
-    img {
-        width: 20%;
+    .poster {
+        width: 300px;
+        height: 400px;
     }
 
     h2 {
@@ -41,7 +39,7 @@ main {
         margin: 0 auto;
     }
 
-    .randomizeBtn {
+    button {
         padding: 15px 30px;
         background-color: $solidWhite;
         border: 2px solid $primaryColor;
@@ -55,5 +53,9 @@ main {
             background-color: $primaryColor;
             color: $solidWhite;
         }
+    }
+
+    .bottomImg {
+        padding: 0;
     }
 }
