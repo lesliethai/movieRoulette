@@ -57,7 +57,6 @@ movie.displaySearch = (array) => {
 
 // display search or error sentence
 movie.displaySentence = (array) => {
-    console.log(array);
     const error = document.querySelector('.error');
     const movieDisplayP = document.querySelector('.movieDisplayP');
 

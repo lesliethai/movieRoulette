@@ -377,6 +377,7 @@ header {
 
 main {
   background-color: #29304E;
+  background: url(../assets/stars-galaxy.gif);
 }
 main .randomize {
   background: rgba(255, 255, 255, 0.1);
