@@ -10,7 +10,6 @@ header {
 .headerImgContainer {
     display: flex; 
     justify-content: end; 
-    margin: 0 50px; 
 
     img {
         width: 80%;
@@ -20,7 +19,8 @@ header {
 
 .headerImage {
     display: flex;
-
+    justify-content: space-between; 
+    
     .headerHeadingContainer {
         display: flex;
         align-items: center; 

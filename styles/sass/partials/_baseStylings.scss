@@ -20,7 +20,7 @@ ul {
   padding: 0;
 }
 
-li {
+header li {
   display: inline-block;
   
   &:not(:last-child) {
@@ -42,9 +42,7 @@ a {
 }
 
 a:hover,
-a:focus,
-button:hover,
-button:focus {
+a:focus {
   cursor: pointer; 
   color: $tertiaryColor; 
 }
