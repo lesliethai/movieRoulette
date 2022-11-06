@@ -1,7 +1,7 @@
 main {
 
     background-color: $quaternary;
-    background: url(../assets/stars-galaxy.gif);
+    background-image: url(../assets/stars-galaxy.gif);
 
     .randomize {
         background: rgba($color: $solidWhite, $alpha: 0.1);
