@@ -286,7 +286,7 @@ footer p {
 
 body {
   font-size: 62.5%;
-  background-color: #25335C;
+  background-color: rgb(37, 51, 92);
 }
 
 ul {
@@ -295,10 +295,10 @@ ul {
   padding: 0;
 }
 
-li {
+header li {
   display: inline-block;
 }
-li:not(:last-child) {
+header li:not(:last-child) {
   margin-right: 20px;
 }
 
@@ -312,15 +312,13 @@ a {
   text-decoration: none;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 a:hover,
-a:focus,
-button:hover,
-button:focus {
+a:focus {
   cursor: pointer;
-  color: #F04A47;
+  color: rgb(240, 74, 71);
 }
 
 .displayNone {
@@ -328,11 +326,11 @@ button:focus {
 }
 
 .errorDisplay {
-  color: #F04A47;
+  color: rgb(240, 74, 71);
 }
 
 .movieTitleDisplay {
-  color: #FBC2C1;
+  color: rgb(251, 194, 193);
 }
 
 header {
@@ -341,7 +339,7 @@ header {
 
 .generateUrl,
 .searchUrl {
-  color: #F04A47;
+  color: rgb(240, 74, 71);
 }
 
 .headerImgContainer {
@@ -351,7 +349,6 @@ header {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
-  margin: 0 50px;
 }
 .headerImgContainer img {
   width: 80%;
@@ -362,6 +359,9 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .headerImage .headerHeadingContainer {
   display: -webkit-box;
@@ -370,13 +370,13 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #FFE9B3;
+  color: rgb(255, 233, 179);
   margin-top: 200px;
   min-width: 300px;
 }
 
 main {
-  background-color: #2F2E41;
+  background-color: rgb(47, 46, 65);
   background-image: url(../assets/stars-galaxy.gif);
 }
 main .randomize {
@@ -384,11 +384,11 @@ main .randomize {
   border-radius: 15px;
 }
 main .poster {
-  width: 300px;
-  height: 400px;
+  width: 200px;
+  height: 250px;
 }
 main h2 {
-  color: white;
+  color: rgb(255, 255, 255);
   margin-bottom: 100px;
   padding-top: 40px;
   text-align: center;
@@ -396,7 +396,7 @@ main h2 {
 main section {
   padding: 50px 0;
   text-align: center;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 main p {
   line-height: 2.5rem;
@@ -409,18 +409,18 @@ main img {
 }
 main button {
   padding: 15px 30px;
-  background-color: white;
-  border: 2px solid #25335C;
-  color: #25335C;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(37, 51, 92);
+  color: rgb(37, 51, 92);
   border-radius: 10px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 main button:hover,
 main button :focus {
-  border: 2px solid white;
-  background-color: #25335C;
-  color: white;
+  border: 2px solid rgb(255, 255, 255);
+  background-color: rgb(37, 51, 92);
+  color: rgb(255, 255, 255);
 }
 main .bottomImg {
   padding: 0;
@@ -437,7 +437,7 @@ main .bottomImg {
 }
 .search form .submitSearchBtn {
   border-radius: 0;
-  border: 2px solid white;
+  border: 2px solid rgb(255, 255, 255);
   font-size: 1rem;
 }
 
@@ -450,9 +450,9 @@ li img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -462,7 +462,7 @@ li img {
 }
 
 footer {
-  background-color: #FBC2C1;
+  background-color: rgb(251, 194, 193);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -472,4 +472,48 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media (max-width: 1100px) {
+  .headerImgContainer img {
+    width: 100%;
+  }
+  .wrapper {
+    width: 90%;
+  }
+}
+@media (max-width: 800px) {
+  .headerImgContainer img {
+    margin: 0;
+    margin-top: 50px;
+  }
+  .headerImage {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .headerImage .headerHeadingContainer {
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+}
+@media (max-width: 645px) {
+  header {
+    min-height: 90vh;
+  }
+  header li:first-child {
+    display: block;
+  }
+  header li:not(:first-child) {
+    display: inline-block;
+  }
+}
+@media (max-width: 500px) {
+  header {
+    min-height: 70vh;
+  }
+  .submitSearchBtn {
+    margin-top: 15px;
+  }
 }
