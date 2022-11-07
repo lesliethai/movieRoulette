@@ -3,4 +3,11 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    a {
+        display: inline-block;
+        transition: 0.3s;
+        color: black;
+
+    }
 }

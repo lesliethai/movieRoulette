@@ -269,7 +269,8 @@ header h2 {
   font-size: 1rem;
 }
 
-footer p {
+footer,
+footer a {
   font-size: 1.3rem;
 }
 
@@ -307,7 +308,7 @@ img {
   display: block;
 }
 
-a {
+header a {
   display: inline-block;
   text-decoration: none;
   -webkit-transition: 0.3s;
@@ -472,6 +473,12 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+footer a {
+  display: inline-block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: black;
 }
 
 @media (max-width: 1100px) {

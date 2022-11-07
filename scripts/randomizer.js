@@ -1,7 +1,7 @@
 // MVP: query the imdb-api.com API for selected queries to generate random movie titles based on filter selected
 
 
-// Create an app object (movieGenerator)
+// Create an app object
 const movie = {};
 
 // Create an init method to setup the application
@@ -10,7 +10,6 @@ movie.init = () => {
     movie.getSelectedMovie();
 } 
 
-// k_3socm0b3 k_z8o3ltcf  
 movie.apiKey = `k_z8o3ltcf`;
 movie.url = `https://imdb-api.com/en/API/MostPopularMovies/${movie.apiKey}`;
 
