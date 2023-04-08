@@ -25,6 +25,9 @@ movie.movieSearch = (q) => {
         .then(response => {
             movie.displaySearch(response.results); 
             movie.displaySentence(response.results);
+        })
+        .catch((err) => {
+            console.log('error:', err.message);
         });
 }
 

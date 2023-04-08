@@ -338,6 +338,10 @@ header {
   min-height: 100vh;
 }
 
+.searchHeader {
+  min-height: 0;
+}
+
 .generateUrl,
 .searchUrl {
   color: rgb(240, 74, 71);
@@ -428,18 +432,35 @@ main .bottomImg {
 }
 
 .search form {
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .search form .searchInput {
   width: 250px;
   padding: 15px 30px;
   font-family: "Lato", sans-serif;
   font-size: 1rem;
+  margin-right: 2px;
 }
 .search form .submitSearchBtn {
   border-radius: 0;
-  border: 2px solid rgb(255, 255, 255);
+  background-color: black;
+  border-color: transparent;
+  color: rgb(255, 255, 255);
   font-size: 1rem;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+.search form .submitSearchBtn:hover {
+  color: black;
+  background-color: rgb(251, 194, 193);
 }
 
 li img {
@@ -515,12 +536,26 @@ footer a {
   header li:not(:first-child) {
     display: inline-block;
   }
+  .searchHeader {
+    padding-bottom: 25px;
+  }
 }
 @media (max-width: 500px) {
   header {
     min-height: 70vh;
   }
-  .submitSearchBtn {
-    margin-top: 15px;
+  .search form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .search form button {
+    margin-top: 3px;
+  }
+}
+@media (max-width: 350px) {
+  .headerNav li:last-child {
+    margin-top: 25px;
   }
 }

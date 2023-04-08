@@ -1,17 +1,28 @@
 .search form {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   .searchInput {
     width: 250px;
     padding: 15px 30px;
     font-family: $baseFont;
     font-size: 1rem;
+    margin-right: 2px;
   }
 
   .submitSearchBtn {
     border-radius: 0;
-    border: 2px solid $solidWhite;
+    background-color: black;
+    border-color: transparent;
+    color: $solidWhite;
     font-size: 1rem;
+    transition: 300ms;
+
+    &:hover {
+      color: black;
+      background-color: $secondaryColor;
+    }
   }
 
 }

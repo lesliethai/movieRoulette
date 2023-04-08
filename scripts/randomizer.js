@@ -21,6 +21,9 @@ movie.getSelectedMovie = () => {
         .then(response => {  
             movie.returnedMovies = response.items;     
             movie.generateMovie(); 
+        })
+        .catch((err) => {
+            console.log('error:', err.message);
         }); 
 }
 

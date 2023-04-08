@@ -12,7 +12,7 @@
 </head>
 <body>
     <a href="#mainContent" class="skipLink">Skip to main content.</a>
-    <header>
+    <header class="searchHeader">
         <div class="wrapper">
             <nav class="navBar">
                 <div class="headerNav">
@@ -27,25 +27,16 @@
                     </ul>
                 </div>
             </nav>
-            <div class="headerImage">
-                <div class="headerHeadingContainer">
-                    <h2>movie magic, <br> grab your popcorn</h2>
-                </div>
-                <div class="headerImgContainer">
-                    <img src="./assets/headerImage.svg"
-                        alt="Two girls sitting on a couch with popcorn about to watch a movie">
-                </div>
-            </div>
         </div>
     </header>
     <main id="mainContent">
         <div class="wrapper">
             <section class="search">
                 <h2>Movie Search</h2>
-                <form action="">
-                    <label for="search" class="srOnly">Search Movie:</label>
-                    <input type="text" class="searchInput" placeholder="Search Movie...">
-                    <button class="submitSearchBtn">Search Movie</button>
+                <form action="#" method="POST" name="movieSearch" id="movieSearch" class="movieSearch">
+                    <label for="searchInput" class="srOnly">Search Movie:</label>
+                    <input type="text" id="searchInput" name="searchInput" class="searchInput" placeholder="Search Movie...">
+                    <button class="submitSearchBtn">Search</button>
                 </form>
             </section>
             <section class="movieDisplay">

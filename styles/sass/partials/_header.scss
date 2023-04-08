@@ -2,6 +2,10 @@ header {
     min-height: 100vh;
 }
 
+.searchHeader {
+    min-height: 0;
+}
+
 .generateUrl,
 .searchUrl {
     color: $tertiaryColor;

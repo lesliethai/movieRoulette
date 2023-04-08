@@ -41,6 +41,10 @@
             }
         }
     }
+
+    .searchHeader {
+        padding-bottom: 25px;
+    }
 }
 
 @media (max-width: 500px) {
@@ -48,7 +52,17 @@
         min-height: 70vh;
     }
 
-    .submitSearchBtn {
-        margin-top: 15px;
+    .search form {
+        flex-direction: column;
+
+        button {
+            margin-top: 3px;
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .headerNav li:last-child {
+        margin-top: 25px;
     }
 }
