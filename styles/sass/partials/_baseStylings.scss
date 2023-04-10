@@ -41,11 +41,16 @@ header a {
   color: $solidWhite;
 }
 
-a:hover,
-a:focus {
-  cursor: pointer; 
-  color: $tertiaryColor; 
+a {
+  cursor: pointer;
 }
+
+header a:hover,
+header a:focus {
+  color: $accentColor; 
+}
+
+
 
 .displayNone {
   display: none;

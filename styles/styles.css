@@ -316,10 +316,13 @@ header a {
   color: rgb(255, 255, 255);
 }
 
-a:hover,
-a:focus {
+a {
   cursor: pointer;
-  color: rgb(240, 74, 71);
+}
+
+header a:hover,
+header a:focus {
+  color: rgb(255, 233, 179);
 }
 
 .displayNone {
@@ -344,7 +347,7 @@ header {
 
 .generateUrl,
 .searchUrl {
-  color: rgb(240, 74, 71);
+  color: rgb(255, 233, 179);
 }
 
 .headerImgContainer {
